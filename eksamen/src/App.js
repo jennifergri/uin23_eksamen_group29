@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <Routes>
-      <Route path="/dashboard" element={<Dashboard />}/>
+      <Route path="/" element={<Dashboard />}/>
       <Route path="/gameshop" element={<GameShop />}/>
       <Route path="/mygames" element={<MyGames />}/>
       <Route path="/favourites" element={<MyFavourites />}/>
