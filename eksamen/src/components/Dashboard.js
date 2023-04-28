@@ -1,3 +1,4 @@
+import GameCard from "./GameCard";
 import Nav from "./Nav";
 
 export default function Dashboard(){
@@ -8,11 +9,12 @@ export default function Dashboard(){
             <h1>Girly Girls Games</h1>
             <Nav />
         </header>
+
         <main>
             <h2>GAMESHOP</h2>
         
             <section>
-                <article></article>
+                <GameCard/>
             </section>
 
             <section>
@@ -21,10 +23,8 @@ export default function Dashboard(){
 
             <section>
                 <h2>MY FAVOURITES</h2>
-            </section>
-            
+            </section>  
         </main>
-
     </div>
 
     )
