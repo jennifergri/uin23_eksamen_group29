@@ -1,6 +1,7 @@
 import Nav from "./Nav";
 
 export default function Dashboard(){
+
     return(
     <div>
         <header> 
@@ -23,6 +24,7 @@ export default function Dashboard(){
             </section>
             
         </main>
+
     </div>
 
     )

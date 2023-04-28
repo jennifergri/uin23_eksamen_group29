@@ -15,7 +15,13 @@ function App() {
       <Route path="/mygames" element={<MyGames />}/>
       <Route path="/myfavourites" element={<MyFavourites />}/>
     </Routes>
+
+      <footer>
+      <p>API kredit til</p><a href="https://rawg.io">RAWG</a>
+      </footer>
+
     </>
+    
   );
 }
 
