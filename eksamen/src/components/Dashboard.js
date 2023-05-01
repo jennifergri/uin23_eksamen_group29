@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import GameCard from "./GameCard";
 import Nav from "./Nav";
+import MyGames from "./MyGames";
 
-export default function Dashboard(){
+export default function Dashboard({getShop}){
 
     return(
     <div>
@@ -15,14 +16,16 @@ export default function Dashboard(){
             <h2>GAMESHOP</h2>
             <button>
                 <Link to="/gameshop">Visit shop</Link>
-                </button>
-        
+            </button>
             <section>
-                <GameCard/>
+                <GameCard getShop={getShop} />
             </section>
 
             <section>
                 <h2>MY GAMES-LIBRARY</h2>
+                <button>
+                    <Link to="/mygames">Go to library</Link>
+                </button>
             </section>
 
             <section>
