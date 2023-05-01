@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-export default function GameCard({game, index, getGame}) { 
+export default function GameCard({game, index}) { 
 
     return (
         <>
