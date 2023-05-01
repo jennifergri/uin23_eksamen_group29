@@ -5,7 +5,7 @@ export default function Nav(){
     return (
         //Henter navigasjonen fra kompontentet som blir sendt videre til app.js (klikkbare)
         <nav>
-          <li>
+                <li>
                 <Link to="/gameshop">Shop</Link>
                 </li>
                 <li>
