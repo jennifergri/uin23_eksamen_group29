@@ -6,7 +6,7 @@ export default function GameShop(){
     const [shop, setShop] = useState(null)
 
     const getShop = async() => {
-        const response = await fetch('https://api.rawg.io/api/games?key=97ef2c2ae8e64769b34f2e83f4c1f037&ordering=-released&page_size=10&page=1&dates=2023-01-01,2023-12-31')
+        const response = await fetch('https://api.rawg.io/api/games?key=97ef2c2ae8e64769b34f2e83f4c1f037&ordering=-released&page_size=10&page=1&dates=2023-01-01,2023-12-31&genres=casual')
         const data = await response.json()
         setShop(data.results)
         console.log(data)
