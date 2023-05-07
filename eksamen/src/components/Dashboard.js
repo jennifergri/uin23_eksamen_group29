@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import GameCard from "./GameCard";
 import Nav from "./Nav";
 
-export default function Dashboard({games}){
+export default function Dashboard({games, genredGames}){
 
     return(
     <div>
@@ -28,7 +28,7 @@ export default function Dashboard({games}){
                     <Link to="/mygames" >Go to library</Link>
                 </button>
                 
-                {games?.slice(0, 4).map((game, index) => {
+                {genredGames?.slice(0, 4).map((game, index) => {
                     return <GameCard key={index} game={game} />
                 })}
                 {/*Kilde: Brukt slice metoden for å dele opp objektene i arrayen til APIet basert på index:
