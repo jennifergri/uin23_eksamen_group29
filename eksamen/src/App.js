@@ -25,18 +25,23 @@ function App() {
           setLatestReleaseDate(latestReleaseDate);
           console.log(data);*/
 
-          const adventureGames = games?.filter((game) => game.genres.some((genre) => genre.slug === "adventure"))
-  
-          console.log(games?.filter((game) => game.genres.some((genre) => genre.slug === "adventure")))
-
-          setGenredGames(adventureGames)
-        /*Kilde: .filter metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter */
-        /*Kilde: .some metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some 
-        for å sjekke arrayen om sjangeren inneholder adventure og deretter returnerer vi det i return. */
       }
       useEffect(() => {
           getGame()
       },[]);
+
+      useEffect(() => {
+        if (games) {
+          const adventureGames = games.filter((game) =>
+            game.genres.some((genre) => genre.slug === 'adventure')
+          );
+          setGenredGames(adventureGames);
+        }
+      }, [games]);
+
+      /*Kilde: .filter metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter */
+      /*Kilde: .some metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some 
+        for å sjekke arrayen om sjangeren inneholder adventure og deretter returnerer vi det i return. */
 
   return (
     <>
