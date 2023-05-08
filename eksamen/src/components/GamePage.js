@@ -6,11 +6,10 @@ export default function GamePage ({game}) {
     const {slug} = useParams();
     const oneGame = game?.find((g) => g.slug === slug)
 
-
     console.log(oneGame)
 
     return (
-        <article>
+        <article >
             <h2>{oneGame?.name}</h2>
             <img width="200" height="200" src={oneGame?.background_image !== null ? oneGame?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={oneGame?.name} />
             
