@@ -45,7 +45,7 @@ function App() {
       <Route path="/gameshop" element={<GameShop games={games}/>}/>
       <Route path="/mygames" element={<MyGames games={genredGames}/>}/>
       <Route path="/myfavourites" element={<MyFavourites />}/>
-      <Route path=":slug" element={<GamePage game={games} />}/>
+      <Route path="/:slug" element={<GamePage game={games} />}/>
     </Routes>
 
     <footer>
