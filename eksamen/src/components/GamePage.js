@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-
 export default function GamePage ({game, favourites, setFavourites}) { 
 
     const {slug} = useParams();
@@ -12,15 +11,14 @@ export default function GamePage ({game, favourites, setFavourites}) {
         const alreadyAdded = favourites.some(game => game.id === oneGame.id)
 
         // Hvis den ikke ligger i array så legg til
-        // push fungerer ikke, så fant denne hehehe:  https://stackoverflow.com/questions/54676966/push-method-in-react-hooks-usestate
+        // push fungerer ikke, så fant denne hehehe: https://stackoverflow.com/questions/54676966/push-method-in-react-hooks-usestate
         if(!alreadyAdded) {
             setFavourites([...favourites, oneGame])
         }
-
     }
 
     return (
-        <article >
+        <article>
             <h2>{oneGame?.name}</h2>
             <img width="200" height="200" src={oneGame?.background_image !== null ? oneGame?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={oneGame?.name} />
             
@@ -45,6 +43,7 @@ export default function GamePage ({game, favourites, setFavourites}) {
                 ))}
                 </p>
             </section>
+
             <button onClick={handleFavorite}>Add to favourites</button>
         </article>
     )

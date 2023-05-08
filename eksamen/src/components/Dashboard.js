@@ -3,12 +3,12 @@ import GameCard from "./GameCard";
 import Nav from "./Nav";
 
 export default function Dashboard({games, genredGames}){
-
+    
     return(
     <div>
         <header> 
             <h1>Girly Girls Games</h1>
-            <Nav />
+            <Nav/>
         </header>
 
         <main>
@@ -25,7 +25,7 @@ export default function Dashboard({games, genredGames}){
             <section> 
                 <h2>MY GAMES-LIBRARY</h2>
                 <button>
-                    <Link to="/mygames" >Go to library</Link>
+                    <Link to="/mygames">Go to library</Link>
                 </button>
                 
                 {genredGames?.slice(0, 4).map((game, index) => {
@@ -38,7 +38,7 @@ export default function Dashboard({games, genredGames}){
             <section>
                 <h2>MY FAVOURITES</h2>
                 <button>
-                    <Link to="/myfavourites" >Go to favourites</Link>
+                    <Link to="/myfavourites">Go to favourites</Link>
                 </button>
             </section>  
         </main>
