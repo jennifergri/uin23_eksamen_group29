@@ -6,6 +6,7 @@ import GameShop from './components/GameShop';
 import MyGames from './components/MyGames';
 import MyFavourites from './components/MyFavourites';
 import { useEffect, useState } from "react";
+import GamePage from './components/GamePage';
 
 function App() {
       //API-nøkkel: 97ef2c2ae8e64769b34f2e83f4c1f037
@@ -19,6 +20,9 @@ function App() {
           setGames(data.results)
           //Satte page size til 100 slik at vi får ut flere av den valgte den valgfrie sjangeren på MyGames. 
           console.log(data)
+        
+          const actionGames = games.filter((game) => game.genres.some((genre) => genre.slug === 'action'))
+          setGenredGames(actionGames)
           
           /*const latestReleaseDate = new Date(Math.max(...data.results.map(game => new Date(game.released))));
           const today=new Date()
@@ -28,16 +32,7 @@ function App() {
       }
       useEffect(() => {
           getGame()
-      },[]);
-
-      useEffect(() => {
-        if (games) {
-          const adventureGames = games.filter((game) =>
-            game.genres.some((genre) => genre.slug === 'adventure')
-          );
-          setGenredGames(adventureGames);
-        }
-      }, [games]);
+      },[games]);
 
       /*Kilde: .filter metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter */
       /*Kilde: .some metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some 
@@ -50,6 +45,7 @@ function App() {
       <Route path="/gameshop" element={<GameShop games={games}/>}/>
       <Route path="/mygames" element={<MyGames games={genredGames} />}/>
       <Route path="/myfavourites" element={<MyFavourites />}/>
+      <Route path=":slug" element={<GamePage game={games} />} />
     </Routes>
 
     <footer>
