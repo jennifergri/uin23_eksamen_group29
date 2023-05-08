@@ -12,6 +12,8 @@ function App() {
       //API-nøkkel: 94d35c9276c5445c8b0987bb5754074f
       const [games, setGames] = useState(null)
       const [genredGames, setGenredGames] = useState(null) 
+      const [favourites, setFavourites] = useState([])
+
        
       const getGame = async() => {
           const response = await fetch('https://api.rawg.io/api/games?key=94d35c9276c5445c8b0987bb5754074f&ordering=-released&page=1&page_size=100&page=1&dates=2023-01-01,2023-12-31')
@@ -19,6 +21,11 @@ function App() {
           const data = await response.json()
           setGames(data.results)
           console.log(data)
+
+          const adventureGames = data.results.filter((game) => game.genres.some((genre) => genre.slug === 'action'))
+          setGenredGames(adventureGames)
+
+          console.log(adventureGames)
         
           /*const actionGames = games?.filter((game) => game.genres.some((genre) => genre.slug === 'action'))
           setGenredGames(actionGames)
@@ -31,21 +38,14 @@ function App() {
           getGame()
       },[]);
 
-      useEffect(() => {
-        if (games) {
-          const adventureGames = games.filter((game) => game.genres.some((genre) => genre.slug === 'adventure'))
-          setGenredGames(adventureGames)
-        }
-      }, [games])
-
   return (
     <>
     <Routes>
       <Route path="/" element={<Dashboard games={games} genredGames={genredGames}/>}/>
       <Route path="/gameshop" element={<GameShop games={games}/>}/>
       <Route path="/mygames" element={<MyGames games={genredGames}/>}/>
-      <Route path="/myfavourites" element={<MyFavourites />}/>
-      <Route path="/:slug" element={<GamePage game={games} />}/>
+      <Route path="/myfavourites" element={<MyFavourites games={favourites} />}/>
+      <Route path="/:slug" element={<GamePage game={games} favourites={favourites} setFavourites={setFavourites} />}/>
     </Routes>
 
     <footer>

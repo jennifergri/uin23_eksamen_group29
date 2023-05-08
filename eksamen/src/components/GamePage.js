@@ -2,19 +2,22 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 
-export default function GamePage ({game}) { 
+export default function GamePage ({game, favourites, setFavourites}) { 
 
     const {slug} = useParams();
     const oneGame = game?.find((g) => g.slug === slug)
 
+    const handleFavorite = () => { 
+        // Sjekker om spillet allerede ligger i favoritter
+        const alreadyAdded = favourites.some(game => game.id === oneGame.id)
 
-    const [favourites, setFavourites] = useState([]);
+        // Hvis den ikke ligger i array så legg til
+        // push fungerer ikke, så fant denne hehehe:  https://stackoverflow.com/questions/54676966/push-method-in-react-hooks-usestate
+        if(!alreadyAdded) {
+            setFavourites([...favourites, oneGame])
+        }
 
-    
-    const handleClick = () => {
-        setFavourites(favourites.push(oneGame))}
-
-    console.log(favourites)
+    }
 
     return (
         <article >
@@ -42,7 +45,7 @@ export default function GamePage ({game}) {
                 ))}
                 </p>
             </section>
-            <button onClick={handleClick}>Add to favourites</button>
+            <button onClick={handleFavorite}>Add to favourites</button>
         </article>
     )
 }
