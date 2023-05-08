@@ -37,6 +37,9 @@ export default function Dashboard({games, genredGames}){
 
             <section>
                 <h2>MY FAVOURITES</h2>
+                <button>
+                    <Link to="/myfavourites" >Go to favourites</Link>
+                </button>
             </section>  
         </main>
     </div>

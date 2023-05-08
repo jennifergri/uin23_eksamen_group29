@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 
 export default function GamePage ({game}) { 
 
     const {slug} = useParams();
     const oneGame = game?.find((g) => g.slug === slug)
 
-    console.log(oneGame)
+
+    const [favourites, setFavourites] = useState([]);
+
+    
+    const handleClick = () => {
+        setFavourites(favourites.push(oneGame))}
+
+    console.log(favourites)
 
     return (
         <article >
@@ -34,11 +42,7 @@ export default function GamePage ({game}) {
                 ))}
                 </p>
             </section>
+            <button onClick={handleClick}>Add to favourites</button>
         </article>
     )
 }
-
-/*{game.map((index) => (
-    <GameCard 
-    key={index}/>
-    ))}*/
