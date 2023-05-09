@@ -12,3 +12,4 @@ export default function GameShop({games}){
         </>
     )
 }
+//Filtrere ut de 10 nyeste her.

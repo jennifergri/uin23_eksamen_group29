@@ -46,3 +46,9 @@ export default function Dashboard({games, genredGames}){
 
     )
 }
+
+//Filtrere ut de 3 nyeste her. Ikke i API-kallet. Filtrere på rating. Fjernet mange av dem som har kommet ut enda. Filtrere videre datoen. 
+//Sorterer, laget to variabler hvor den ene blir en date, den andre en annen, trekker dem fra hverandre. (Sånn AC gjorde det med newdate)
+//Sort newdate javascript (StackOverflow) -> https://stackoverflow.com/questions/10123953/how-to-sort-an-object-array-by-date-property (nr.9)
+//skrive date?.
+//getDetailsOfGame (inne på dokumentasjonen, lag et nytt API-kall på id-en eller slugen, f.eks på GamePage)

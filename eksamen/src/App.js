@@ -15,7 +15,7 @@ function App() {
       const [favourites, setFavourites] = useState([])
 
       const getGame = async() => {
-          const response = await fetch('https://api.rawg.io/api/games?key=94d35c9276c5445c8b0987bb5754074f&ordering=-released&page=1&page_size=100&page=1&dates=2023-01-01,2023-12-31')
+          const response = await fetch('https://api.rawg.io/api/games?key=94d35c9276c5445c8b0987bb5754074f&ordering=-released&page=1&page_size=100&page=1')
           //Satte page size til 100 slik at vi får ut flere av den valgte den valgfrie sjangeren på MyGames. 
           const data = await response.json()
           setGames(data.results)
