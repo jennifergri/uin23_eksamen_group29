@@ -6,7 +6,6 @@ body {
   color: #fafaef;
 }
 body .container {
-  max-width: 1200px;
   width: 100%;
 }
 body .container header {
@@ -20,12 +19,14 @@ body .container header h1 {
   font-weight: bold;
   font-size: 50px;
   font-family: "Fugaz One", cursive;
+  margin: 1rem;
 }
 body .container header nav {
   display: flex;
   text-align: center;
   align-items: center;
   gap: 1rem;
+  margin: 1rem;
 }
 body .container header nav li {
   color: rgba(0, 0, 0, 0);
@@ -35,6 +36,27 @@ body .container header nav li {
 body .container main {
   width: 100%;
   margin: 1rem;
+}
+body .container main .gamecard {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+body .container main .gamecard img {
+  width: 150px;
+  height: 150px;
+}
+body .container main .visitshop {
+  display: flex;
+  gap: 1.5rem;
+}
+body .container main .visitshop button {
+  padding: 1rem;
+}
+body .container main .gameshop {
+  display: flex;
+  justify-content: space-around;
+  background-color: #efc3e6;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -8,30 +8,31 @@ body {
     font-size: 20px;
     color: $White;  
 
-    .container{
-        max-width: 1200px;
+    .container {
         width: 100%;
 
-        header{
+        header {
             display: flex;
             justify-content: space-between;
             background-color: $White;
             width: 100%;
 
-            h1{
+            h1 {
                 color: $Pink;
                 font-weight: bold;
                 font-size: 50px;
                 font-family:'Fugaz One', cursive;
+                margin: 1rem;
             }
 
-            nav{
+            nav {
                 display: flex;
                 text-align: center;
                 align-items: center;
                 gap: 1rem;
+                margin: 1rem;
                 
-                li{
+                li {
                     color: $Black;
                     list-style: none;
                     text-decoration: none;
@@ -39,9 +40,37 @@ body {
             }
         }
 
-        main{
+        main {
             width: 100%;
             margin: 1rem;
+
+            .gamecard {
+
+                display: flex;
+                flex-wrap: wrap;
+                padding: 2rem;
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
+            .visitshop {
+                display: flex;
+                gap: 1.5rem;
+
+                button {
+                    
+                    padding: 1rem;
+                }
+            }
+
+            .gameshop {
+                display: flex;
+                justify-content: space-around;
+                background-color: $Purple;
+            }
         }
     }
 }
