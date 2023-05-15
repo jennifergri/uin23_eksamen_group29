@@ -1,7 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-export default function GamePage ({game, favourites, setFavourites}) { 
+export default function GamePage ({id, game, favourites, setFavourites}) { 
+
+    const [info, setInfo] = useState()
+
+    const getInfo = async() => {
+        const response = await fetch(`https://api.rawg.io/api/games/334666?key=94d35c9276c5445c8b0987bb5754074f&ordering=-released&page=1&page_size=100&page=1`)
+        //Satte page size til 100 slik at vi får ut flere av den valgte den valgfrie sjangeren på MyGames. 
+        const data = await response.json()
+        setInfo(data)
+        console.log(info)
+    }
+
+    useEffect(() => {
+        getInfo()
+    },[id]);
 
     const {slug} = useParams();
     const oneGame = game?.find((g) => g.slug === slug)
@@ -19,7 +33,7 @@ export default function GamePage ({game, favourites, setFavourites}) {
 
     return (
         <article>
-            <h2>{oneGame?.name}</h2>
+            <h2>{info?.name}</h2>
             <img width="200" height="200" src={oneGame?.background_image !== null ? oneGame?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={oneGame?.name} />
             
             <section>

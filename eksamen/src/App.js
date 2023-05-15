@@ -27,9 +27,6 @@ function App() {
           for å sjekke arrayen om sjangeren inneholder adventure og deretter returnerer vi det i return. */
           setGenredGames(adventureGames)
           console.log(adventureGames)
-        
-          /*const actionGames = games?.filter((game) => game.genres.some((genre) => genre.slug === 'action'))
-          setGenredGames(actionGames)*/
       }
       
       useEffect(() => {
