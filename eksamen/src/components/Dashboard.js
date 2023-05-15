@@ -6,7 +6,7 @@ export default function Dashboard({games, genredGames, handleFavourite}){
     
     
     return(
-    <div>
+    <div className="container">
         <header> 
             <h1>Girly Girls Games</h1>
             <Nav/>

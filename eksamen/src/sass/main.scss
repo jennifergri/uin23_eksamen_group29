@@ -1,5 +1,47 @@
 @import "colors";
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
 
 body {
     background-color: $DarkBlue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: $White;  
+
+    .container{
+        max-width: 1200px;
+        width: 100%;
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            background-color: $White;
+            width: 100%;
+
+            h1{
+                color: $Pink;
+                font-weight: bold;
+                font-size: 50px;
+                font-family:'Fugaz One', cursive;
+            }
+
+            nav{
+                display: flex;
+                text-align: center;
+                align-items: center;
+                gap: 1rem;
+                
+                li{
+                    color: $Black;
+                    list-style: none;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        main{
+            width: 100%;
+            margin: 1rem;
+        }
+    }
 }
