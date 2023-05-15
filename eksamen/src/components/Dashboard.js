@@ -41,7 +41,7 @@ export default function Dashboard({games, genredGames, handleFavourite}){
         </main>
 
         <aside>
-        <section className="favourites">
+            <section className="favourites">
                 <h2>MY FAVOURITES</h2>
                 <button>
                     <Link to="/myfavourites">Go to favourites</Link>
