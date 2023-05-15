@@ -38,8 +38,10 @@ export default function Dashboard({games, genredGames, handleFavourite}){
                 {/*Kilde: Brukt slice metoden for å dele opp objektene i arrayen til APIet basert på index:
                 https://lms.webtricks.blog/kurs/innforing-i-programmering/arrayer-og-objekter/arrayer#h919312c0e8c5*/}
             </section>
+        </main>
 
-            <section className="favourites">
+        <aside>
+        <section className="favourites">
                 <h2>MY FAVOURITES</h2>
                 <button>
                     <Link to="/myfavourites">Go to favourites</Link>
@@ -48,7 +50,8 @@ export default function Dashboard({games, genredGames, handleFavourite}){
                     return <GameCard key={index} game={game} />
                 })}
             </section>  
-        </main>
+        </aside>
+
     </div>
 
     )
