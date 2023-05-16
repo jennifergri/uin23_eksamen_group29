@@ -43,6 +43,11 @@ export default function GamePage ({id, game, favourites, setFavourites}) {
                 <p>Rating: {info?.rating}</p>
                 <p>Playtime: {info?.playtime}</p>
                 <p>Description: {info?.description_raw}</p>
+
+                <p>Tags: {info?.tags?.map((g, index) => (
+                    <span key={index}>{g?.name}, </span>
+                ))}</p>
+                
                 
                 <p>Developers: {info?.developers?.map((g, index) => (
                     <span key={index}>{g?.name}, </span>
