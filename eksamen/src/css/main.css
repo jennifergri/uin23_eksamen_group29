@@ -115,6 +115,15 @@ body .container main .favourites {
   padding: 2rem;
   gap: 2rem;
 }
+body .container .one-game {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body .container .one-game h2 {
+  justify-content: center;
+}
 body .container aside {
   grid-area: aside;
   background-color: #ea3471;

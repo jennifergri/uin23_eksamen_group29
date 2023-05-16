@@ -35,6 +35,7 @@ export default function GamePage ({game, favourites, setFavourites}) {
             <h2>{info?.name}</h2>
             <img className='gamepage-img' src={info?.background_image !== null ? info?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={info?.name} />
             
+
             <section className='game-info'>
 
                 {info?.genres.length > 0 &&
