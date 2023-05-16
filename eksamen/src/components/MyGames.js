@@ -5,11 +5,15 @@ export default function MyGames({games}) {
     
   return (
     <>
+    <main>
       <h2>My Games</h2>
 
-      {games?.slice(0, 20).map((game, index) => (
-        <GameCard key={index} game={game} />
-      ))}
+      <section className="mygames">
+        {games?.slice(0, 20).map((game, index) => (
+          <GameCard key={index} game={game} />
+        ))}
+      </section>
+    </main>
     </>
   );
 }

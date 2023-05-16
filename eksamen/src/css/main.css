@@ -10,7 +10,7 @@ body .container {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "header header" "main aside" "footer footer";
-  gap: 1rem;
+  gap: 1rem 2rem;
   width: 100%;
 }
 body .container img {
@@ -66,10 +66,12 @@ body .container header nav li a {
 body .container main {
   grid-area: main;
   width: 100%;
-  margin: 1rem;
+  margin: 0 2rem;
 }
 body .container main .gamecard {
   padding: 2rem;
+  max-width: 200px;
+  background-color: #fafaef;
 }
 body .container main .gamecard h3 {
   text-transform: uppercase;
@@ -90,24 +92,51 @@ body .container main .visitshop button a {
   text-decoration: none;
 }
 body .container main .gameshop {
-  display: flex;
-  justify-content: space-around;
   background-color: #efc3e6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 2rem;
 }
 body .container main .mygames {
-  display: flex;
-  justify-content: space-around;
   background-color: #b4adff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 2rem;
+}
+body .container main .favourites {
+  background-color: #ea3471;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 2rem;
 }
 body .container aside {
   grid-area: aside;
   background-color: #ea3471;
-  margin: 1rem;
+  margin: 0 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 2rem;
 }
 body .container aside a {
+  text-decoration: none;
+  color: #151e3f;
+}
+body .container aside .gamecard {
+  padding: 2rem;
+  max-width: 200px;
+  background-color: #ff79a6;
+}
+body .container aside .gamecard h3 {
+  text-transform: uppercase;
+}
+body .container aside .gamecard a {
   text-decoration: none;
   color: #151e3f;
 }

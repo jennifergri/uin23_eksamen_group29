@@ -58,17 +58,17 @@ function App() {
         {/* Kilde: https://blog.logrocket.com/creating-navbar-react/ */}
       </header>
     
-    <Routes>
-      <Route path="/" element={<Dashboard games={games} genredGames={genredGames} MyFavourites={favourites}/>}/>
-      <Route path="/gameshop" element={<GameShop games={games}/>}/>
-      <Route path="/mygames" element={<MyGames games={genredGames}/>}/>
-      <Route path="/myfavourites" element={<MyFavourites games={favourites} />}/>
-      <Route path="/:slug" element={<GamePage game={games} favourites={favourites} setFavourites={setFavourites} />}/>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Dashboard games={games} genredGames={genredGames} MyFavourites={favourites}/>}/>
+        <Route path="/gameshop" element={<GameShop games={games}/>}/>
+        <Route path="/mygames" element={<MyGames games={genredGames}/>}/>
+        <Route path="/myfavourites" element={<MyFavourites games={favourites} />}/>
+        <Route path="/:slug" element={<GamePage game={games} favourites={favourites} setFavourites={setFavourites} />}/>
+      </Routes>
 
-    <footer>
-      <p>API kredit til</p><a href="https://rawg.io">RAWG.io</a>
-    </footer>
+      <footer>
+        <p>API kredit til</p><a href="https://rawg.io">RAWG.io</a>
+      </footer>
     </div>
   );
 }

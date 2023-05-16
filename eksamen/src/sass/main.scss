@@ -15,7 +15,7 @@ body {
                         "header header"
                         "main aside"
                         "footer footer";
-        gap: 1rem;
+        gap: 1rem 2rem;
         width: 100%;
 
         img {
@@ -81,10 +81,12 @@ body {
         main {
             grid-area: main;
             width: 100%;
-            margin: 1rem;
+            margin: 0 2rem;
 
             .gamecard {
                 padding: 2rem;
+                max-width: 200px;
+                background-color: $White;
 
                 h3{
                     text-transform: uppercase;
@@ -111,29 +113,60 @@ body {
             }
 
             .gameshop {
-                display: flex;
-                justify-content: space-around;
                 background-color: $Purple;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 2rem;
+                gap: 2rem;
             }
 
             .mygames {
-                display: flex;
-                justify-content: space-around;
                 background-color: $LightBlue;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 2rem;
+                gap: 2rem;
+            }
+            
+            .favourites{
+                background-color: $Pink; 
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 2rem;
+                gap: 2rem;
             }
         }
 
         aside {
             grid-area: aside;
             background-color: $Pink;
-            margin: 1rem;
+            margin: 0 2rem;
             display: flex;
             align-items: center;
             flex-direction: column;
+            gap: 2rem;
 
             a {
                 text-decoration: none;
                 color: $DarkBlue;
+            }
+
+            .gamecard {
+                padding: 2rem;
+                max-width: 200px;
+                background-color: $LightPink;
+
+                h3{
+                    text-transform: uppercase;
+                }
+                
+                a {
+                    text-decoration: none;
+                    color: $DarkBlue;
+                }
             }
         }
 
@@ -153,7 +186,6 @@ body {
                 color: $DarkBlue;
                 padding-left: 0.5rem;
             }
-
         }
     }
 }
