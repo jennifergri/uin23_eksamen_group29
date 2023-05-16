@@ -33,7 +33,7 @@ export default function GamePage ({game, favourites, setFavourites}) {
     return (
         <article>
             <h2>{info?.name}</h2>
-            <img src={info?.background_image !== null ? info?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={info?.name} />
+            <img className='gamepage-img' src={info?.background_image !== null ? info?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={info?.name} />
             
             <section>
                 <p>Genres: {info?.genres?.map((g, index) => (

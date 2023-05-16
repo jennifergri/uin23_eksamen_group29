@@ -4,7 +4,6 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
   color: #fafaef;
-  margin: 0;
 }
 body .container {
   display: grid;
@@ -13,6 +12,17 @@ body .container {
   grid-template-areas: "header header" "main aside" "footer footer";
   gap: 1rem;
   width: 100%;
+}
+body .container img {
+  width: 200px;
+  height: 200px;
+}
+body .container .gamepage-img {
+  width: 400px;
+  height: 400px;
+}
+body .container .button {
+  padding: 1rem;
 }
 body .container header {
   grid-area: header;
@@ -46,13 +56,7 @@ body .container main {
   margin: 1rem;
 }
 body .container main .gamecard {
-  display: flex;
-  flex-wrap: wrap;
   padding: 2rem;
-}
-body .container main .gamecard img {
-  width: 150px;
-  height: 150px;
 }
 body .container main .visitshop {
   display: flex;
@@ -62,18 +66,25 @@ body .container main .visitshop button {
   padding: 1rem;
 }
 body .container main .gameshop {
-  grid-area: main;
   display: flex;
   justify-content: space-around;
   background-color: #efc3e6;
 }
 body .container main .mygames {
+  display: flex;
+  justify-content: space-around;
   background-color: #fafaef;
 }
 body .container aside {
   grid-area: aside;
   background-color: #ea3471;
   margin: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body .container footer {
+  grid-area: footer;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -46,17 +46,17 @@ function App() {
       },[]);
 
   return (
-    <>
-    <header> 
-      <h1><Link to="/">Girly Girls Games</Link></h1>
-      <nav>
+    <div className='container'>
+      <header> 
+        <h1><Link to="/">Girly Girls Games</Link></h1>
+        <nav>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/gameshop">Shop</Link></li>
             <li><Link to="/myfavourites">My Favourites</Link></li>
             <li><Link to="/mygames">My Games</Link> </li>
         </nav>
         {/* Kilde: https://blog.logrocket.com/creating-navbar-react/ */}
-    </header>
+      </header>
     
     <Routes>
       <Route path="/" element={<Dashboard games={games} genredGames={genredGames} MyFavourites={favourites}/>}/>
@@ -69,7 +69,7 @@ function App() {
     <footer>
       <p>API kredit til</p><a href="https://rawg.io">RAWG</a>
     </footer>
-    </>
+    </div>
   );
 }
 

@@ -6,7 +6,6 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     color: $White;  
-    margin: 0;
 
     .container {
         display: grid;
@@ -18,6 +17,20 @@ body {
                         "footer footer";
         gap: 1rem;
         width: 100%;
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .gamepage-img{
+            width: 400px;
+            height: 400px;
+        }
+
+        .button{
+            padding: 1rem;
+        }
 
         header {
             grid-area: header;
@@ -55,14 +68,7 @@ body {
             margin: 1rem;
 
             .gamecard {
-                display: flex;
-                flex-wrap: wrap;
                 padding: 2rem;
-
-                img {
-                    width: 150px;
-                    height: 150px;
-                }
             }
 
             .visitshop {
@@ -70,19 +76,19 @@ body {
                 gap: 1.5rem;
 
                 button {
-                    
                     padding: 1rem;
                 }
             }
 
             .gameshop {
-                grid-area: main;
                 display: flex;
                 justify-content: space-around;
                 background-color: $Purple;
             }
 
             .mygames{
+                display: flex;
+                justify-content: space-around;
                 background-color: $White;
             }
         }
@@ -91,6 +97,13 @@ body {
             grid-area: aside;
             background-color: $Pink;
             margin: 1rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer{
+            grid-area: footer;
         }
     }
 }
