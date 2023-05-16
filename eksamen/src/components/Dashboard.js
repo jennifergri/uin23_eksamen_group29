@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import GameCard from "./GameCard";
+import BuyButtons from "./BuyButtons";
 
 export default function Dashboard({games, genredGames, MyFavourites}){
     
@@ -15,6 +16,7 @@ export default function Dashboard({games, genredGames, MyFavourites}){
                     return <GameCard key={index} game={game} />
                 })}
                 {/* Kilde: https://stackoverflow.com/questions/10123953/how-to-sort-an-object-array-by-date-property, samt hjelp fra Ann-Charlott */}
+                <BuyButtons />
             </section>
 
             <section> 
