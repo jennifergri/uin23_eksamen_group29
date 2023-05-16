@@ -13,6 +13,7 @@ export default function GameCard({game, index}) {
                 <p>{game?.genres?.map((g, index) => (
                     <span key={index}>{g?.name} </span>
                 ))}</p>
+                <button>Read more</button>
             </Link>
         </article>
         </>
