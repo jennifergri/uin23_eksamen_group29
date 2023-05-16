@@ -36,38 +36,60 @@ export default function GamePage ({game, favourites, setFavourites}) {
             <img className='gamepage-img' src={info?.background_image !== null ? info?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={info?.name} />
             
             <section>
-                <p>Genres: {info?.genres?.map((g, index) => (
-                    <span key={index}>{g?.name}, </span>
-                ))}</p>
 
-                <p>Rating: {info?.rating}</p>
-                <p>Playtime: {info?.playtime}</p>
+                {info?.genres.length > 0 &&
+                    <p>Genres: {info?.genres?.map((g, index) => (
+                        <span key={index}>{g?.name}{(index !== info.genres.length - 1 ? ', ' : '')} </span>
+                    ))}</p>
+                }
 
-                <p>Tags: {info?.tags?.map((g, index) => (
-                    <span key={index}>{g?.name}, </span>
-                ))}</p>
+                {info?.rating !== 0 &&
+                    <p>Rating: {info?.rating}</p>
+                }
                 
+                {info?.playtime !== 0 && 
+                    <p>Playtime: {info?.playtime}</p>
+                }
+
+                {info?.tags.length > 0 &&
+                    <p>Tags: {info?.tags?.map((g, index) => (
+                        <span key={index}>{g?.name}, </span>
+                    ))}</p> 
+                }
                 
-                <p>Developers: {info?.developers?.map((g, index) => (
-                    <span key={index}>{g?.name}, </span>
-                ))}</p>
+                {info?.developers.length > 0 &&
+                    <p>Developers: {info?.developers?.map((g, index) => (
+                        <span key={index}>{g?.name}{(index !== info.developers.length - 1 ? ', ' : '')} </span>
+                    ))}</p>
+                }
 
-                <p>Publisher: {info?.publishers?.map((g, index) => (
-                    <span key={index}>{g?.name},  </span>
-                ))} </p>
+                {info?.publishers.length > 0 &&
+                    <p>Publisher: {info?.publishers?.map((g, index) => (
+                        <span key={index}>{g?.name}{(index !== info.publishers.length - 1 ? ', ' : '')} </span>
+                    ))} </p>
+                }
 
-                <p>Released: {info?.released}</p>
+                {info?.released !== null &&
+                    <p>Released: {info?.released}</p>
+                }
 
-                <p>Platforms: {info?.platforms?.map((g, index) => (
-                    <span key={index}>{g?.platform.name}, </span>
-                ))}</p>
+                {info?.platforms.length > 0 &&
+                    <p>Platforms: {info?.platforms?.map((g, index) => (
+                        <span key={index}>{g?.platform.name}{(index !== info.platforms.length - 1 ? ', ' : '')} </span>
+                    ))}
+                    </p>
+                }
             
-                <p>Stores: {info?.stores?.map((g, index) => (
-                    <span key={index}>{g?.store.name}, </span>
-                ))}
-                </p>
+                {info?.stores.length > 0 &&
+                    <p>Stores: {info?.stores?.map((g, index) => (
+                        <span key={index}>{g?.store.name}{(index !== info.stores.length - 1 ? ', ' : '')} </span>
+                    ))}
+                    </p>
+                }
 
-                <p>Description: {info?.description_raw}</p>
+                {info?.description_raw && 
+                    <p>Description: {info?.description_raw}</p>
+                }
             </section>
 
             <button onClick={handleFavorite}>Add to favourites</button>
