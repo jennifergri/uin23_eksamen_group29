@@ -24,6 +24,10 @@ body .container .gamepage-img {
 body .container .button {
   padding: 1rem;
 }
+body .container .button a {
+  color: #151e3f;
+  text-decoration: none;
+}
 body .container header {
   grid-area: header;
   display: flex;
@@ -80,6 +84,10 @@ body .container main .visitshop {
 body .container main .visitshop button {
   padding: 1rem;
 }
+body .container main .visitshop button a {
+  color: #151e3f;
+  text-decoration: none;
+}
 body .container main .gameshop {
   display: flex;
   justify-content: space-around;
@@ -97,6 +105,10 @@ body .container aside {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+body .container aside a {
+  text-decoration: none;
+  color: #151e3f;
 }
 body .container footer {
   grid-area: footer;

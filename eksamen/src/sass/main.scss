@@ -30,6 +30,11 @@ body {
 
         .button{
             padding: 1rem;
+
+            a{
+                color: $DarkBlue; 
+                text-decoration: none;
+            }      
         }
 
         header {
@@ -96,6 +101,11 @@ body {
 
                 button {
                     padding: 1rem;
+
+                    a{
+                        color: $DarkBlue;
+                        text-decoration: none;
+                    }
                 }
             }
 
@@ -119,6 +129,11 @@ body {
             display: flex;
             align-items: center;
             flex-direction: column;
+
+            a{
+                text-decoration: none;
+                color: $DarkBlue;
+            }
         }
 
         footer{
