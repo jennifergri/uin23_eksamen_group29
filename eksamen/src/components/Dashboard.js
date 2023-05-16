@@ -1,16 +1,10 @@
 import { Link } from "react-router-dom";
 import GameCard from "./GameCard";
-import Nav from "./Nav";
 
 export default function Dashboard({games, genredGames, MyFavourites}){
     
     return(
     <div>
-        <header> 
-            <h1>Girly Girls Games</h1>
-            <Nav/>
-        </header>
-
         <main>
             <h2>GAMESHOP</h2>
             <button>
