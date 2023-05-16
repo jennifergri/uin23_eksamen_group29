@@ -67,7 +67,7 @@ function App() {
     </Routes>
 
     <footer>
-      <p>API kredit til</p><a href="https://rawg.io">RAWG</a>
+      <p>API kredit til</p><a href="https://rawg.io">RAWG.io</a>
     </footer>
     </div>
   );

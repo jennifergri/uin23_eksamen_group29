@@ -33,6 +33,7 @@ body .container header {
   display: flex;
   justify-content: space-between;
   background-color: #fafaef;
+  border-bottom: 5px solid #ea3471;
   width: 100%;
 }
 body .container header h1 {
@@ -96,7 +97,7 @@ body .container main .gameshop {
 body .container main .mygames {
   display: flex;
   justify-content: space-around;
-  background-color: #fafaef;
+  background-color: #b4adff;
 }
 body .container aside {
   grid-area: aside;
@@ -111,7 +112,19 @@ body .container aside a {
   color: #151e3f;
 }
 body .container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-area: footer;
+  background-color: #fafaef;
+  border-top: 5px solid #ea3471;
+}
+body .container footer p {
+  color: #151e3f;
+}
+body .container footer a {
+  color: #151e3f;
+  padding-left: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
