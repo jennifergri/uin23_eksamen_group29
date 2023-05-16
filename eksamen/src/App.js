@@ -8,8 +8,9 @@ import MyFavourites from './components/MyFavourites';
 import { useEffect, useState } from "react";
 import GamePage from './components/GamePage';
 
+//API-nøkkel: 94d35c9276c5445c8b0987bb5754074f
+
 function App() {
-      //API-nøkkel: 94d35c9276c5445c8b0987bb5754074f
       const [games, setGames] = useState(null)
       const [genredGames, setGenredGames] = useState(null) 
       const [favourites, setFavourites] = useState([])
@@ -32,14 +33,12 @@ function App() {
         //Satte page size til 100 slik at vi får ut flere av den valgte den valgfrie sjangeren på MyGames. 
         const data = await response.json()
         setGames(data.results)
-        //console.log(data)
 
         const adventureGames = data.results.filter((game) => game.genres.some((genre) => genre.slug === 'action'))
         /*Kilde: .filter metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter */
         /*Kilde: .some metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some 
         for å sjekke arrayen om sjangeren inneholder adventure og deretter returnerer vi det i return. */
         setGenredGames(adventureGames)
-        //console.log(adventureGames)
       }
       
       useEffect(() => {

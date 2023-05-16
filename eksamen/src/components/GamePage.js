@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-export default function GamePage ({id, game, favourites, setFavourites}) { 
+export default function GamePage ({game, favourites, setFavourites}) { 
 
     const {slug} = useParams();
     const oneGame = game?.find((g) => g.slug === slug)
     const [info, setInfo] = useState(null)
 
+    /* Gjør et nytt API kall, hvor vi henter ut mer informasjon med slug */
     const getInfo = async() => {
         const response = await fetch(`https://api.rawg.io/api/games/${slug}?key=94d35c9276c5445c8b0987bb5754074f`)
-        //Satte page size til 100 slik at vi får ut flere av den valgte den valgfrie sjangeren på MyGames. 
         const data = await response.json()
         setInfo(data)
         console.log(data)
@@ -33,7 +33,7 @@ export default function GamePage ({id, game, favourites, setFavourites}) {
     return (
         <article>
             <h2>{info?.name}</h2>
-            <img width="200" height="200" src={info?.background_image !== null ? info?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={info?.name} />
+            <img src={info?.background_image !== null ? info?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={info?.name} />
             
             <section>
                 <p>Genres: {info?.genres?.map((g, index) => (

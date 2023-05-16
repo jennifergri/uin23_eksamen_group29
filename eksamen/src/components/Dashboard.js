@@ -14,6 +14,7 @@ export default function Dashboard({games, genredGames, MyFavourites}){
                 {games?.sort((a, b) => { return new Date(a.released) - new Date(b.released)}).slice(0, 3).map((game, index) => {
                     return <GameCard key={index} game={game} />
                 })}
+                {/* Kilde: https://stackoverflow.com/questions/10123953/how-to-sort-an-object-array-by-date-property, samt hjelp fra Ann-Charlott */}
             </section>
 
             <section> 
