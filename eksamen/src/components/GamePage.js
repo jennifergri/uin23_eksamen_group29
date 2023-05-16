@@ -42,7 +42,6 @@ export default function GamePage ({game, favourites, setFavourites}) {
 
                 <p>Rating: {info?.rating}</p>
                 <p>Playtime: {info?.playtime}</p>
-                <p>Description: {info?.description_raw}</p>
 
                 <p>Tags: {info?.tags?.map((g, index) => (
                     <span key={index}>{g?.name}, </span>
@@ -67,6 +66,8 @@ export default function GamePage ({game, favourites, setFavourites}) {
                     <span key={index}>{g?.store.name}, </span>
                 ))}
                 </p>
+
+                <p>Description: {info?.description_raw}</p>
             </section>
 
             <button onClick={handleFavorite}>Add to favourites</button>
