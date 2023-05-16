@@ -8,7 +8,7 @@ export default function Dashboard({games, genredGames, MyFavourites}){
         <main>
             <section className="visitshop">
                 <h2>GAMESHOP</h2>
-                <button>
+                <button className="btn-visitshop">
                     <Link to="/gameshop">Visit shop</Link>
                 </button>
             </section>

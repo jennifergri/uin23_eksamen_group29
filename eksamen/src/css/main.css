@@ -75,14 +75,17 @@ body .container main .gamecard {
 }
 body .container main .gamecard h3 {
   text-transform: uppercase;
+  line-height: 22px;
 }
 body .container main .gamecard a {
   text-decoration: none;
   color: #151e3f;
 }
 body .container main .visitshop {
-  display: flex;
-  gap: 1.5rem;
+  display: ruby;
+}
+body .container main .visitshop .btn-visitshop {
+  margin-left: 2em;
 }
 body .container main .visitshop button {
   padding: 1rem;
@@ -144,6 +147,7 @@ body .container aside .gamecard {
 }
 body .container aside .gamecard h3 {
   text-transform: uppercase;
+  line-height: 22px;
 }
 body .container aside .gamecard a {
   text-decoration: none;
