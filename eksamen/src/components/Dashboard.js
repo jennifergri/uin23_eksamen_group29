@@ -8,7 +8,7 @@ export default function Dashboard({games, genredGames, MyFavourites}){
         <main>
             <section className="visitshop">
                 <h2>GAMESHOP</h2>
-                <button className="btn-visitshop">
+                <button className="button">
                     <Link to="/gameshop">Visit shop</Link>
                 </button>
             </section>
@@ -20,7 +20,14 @@ export default function Dashboard({games, genredGames, MyFavourites}){
                 {/* Kilde: https://stackoverflow.com/questions/10123953/how-to-sort-an-object-array-by-date-property, samt hjelp fra Ann-Charlott */}
             </section>
             
-            <h2>MY GAMES-LIBRARY</h2>
+
+
+            <section className="visitshop">
+                <h2>MY GAMES-LIBRARY</h2>
+                <button className="button">
+                    <Link to="/mygames">Go to library</Link>
+                </button>
+            </section>
             <section className="mygames"> 
                 {genredGames?.slice(0, 4).map((game, index) => {
                     return <GameCard key={index} game={game} />
@@ -28,9 +35,6 @@ export default function Dashboard({games, genredGames, MyFavourites}){
                 {/*Kilde: Brukt slice metoden for å dele opp objektene i arrayen til APIet basert på index:
                 https://lms.webtricks.blog/kurs/innforing-i-programmering/arrayer-og-objekter/arrayer#h919312c0e8c5*/}
             </section>
-            <button className="button">
-                <Link to="/mygames">Go to library</Link>
-            </button>
         </main>
 
         <aside>
