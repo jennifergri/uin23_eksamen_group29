@@ -29,7 +29,7 @@ export default function Dashboard({games, genredGames, MyFavourites}){
                 </button>
             </section>
             <section className="mygames"> 
-                {genredGames?.slice(0, 4).map((game, index) => {
+                {genredGames?.slice(0, 3).map((game, index) => {
                     return <GameCard key={index} game={game} />
                 })}
                 {/*Kilde: Brukt slice metoden for å dele opp objektene i arrayen til APIet basert på index:

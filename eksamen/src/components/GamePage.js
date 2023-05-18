@@ -31,6 +31,7 @@ export default function GamePage ({game, favourites, setFavourites}) {
     }
 
     return (
+        <div>
         <article className='one-game'>
             <h2>{info?.name}</h2>
             <img className='gamepage-img' src={info?.background_image !== null ? info?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={info?.name} />
@@ -93,6 +94,7 @@ export default function GamePage ({game, favourites, setFavourites}) {
                 }
             </section>
         </article>
+        </div>
         /*For fjerning av komma når det ikke er mere informasjon kilde:
         https://www.appsloveworld.com/reactjs/100/10/how-to-add-a-comma-in-array-map-after-every-element-except-last-element-in-react?utm_content=cmp-true */
     )
