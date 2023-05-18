@@ -15,7 +15,7 @@ export default function GameCard({game, index}) {
                     /*For fjerning av komma når det ikke er mere informasjon kilde:
                      https://www.appsloveworld.com/reactjs/100/10/how-to-add-a-comma-in-array-map-after-every-element-except-last-element-in-react?utm_content=cmp-true */
                 ))}</p>
-                <button className='button'>Read more</button>
+                <button className='readbutton'>Read more</button>
             </Link>
         </article>
         </>

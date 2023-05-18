@@ -14,10 +14,45 @@ body {
         text-decoration: none;
         outline: none;
         display: inline-block;
+        padding: 0.8rem;
 
         &:hover {
             opacity: 0.7;
         }
+        a {
+            color: $DarkBlue;
+            text-decoration: none;
+        }
+    }
+
+    .readbutton{
+        font-family:'Fugaz One', cursive;
+        border: 1px solid black;
+        border-radius: 5%;
+        text-decoration: none;
+        outline: none;
+        display: inline-block;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }    
+    }
+
+    .addbutton{
+        font-family:'Fugaz One', cursive;
+        border: 1px solid black;
+        border-radius: 5%;
+        text-decoration: none;
+        outline: none;
+        display: inline-block;
+        cursor: pointer;
+        padding: 0.8rem;
+        margin-top: 2rem;
+
+        &:hover {
+            opacity: 0.7;
+        }    
     }
 
     .container {
@@ -43,15 +78,6 @@ body {
             height: 400px;
             border-radius: 1%;
             box-shadow: $BoxShadow;
-        }
-
-        .button {
-            padding: 1rem;
-
-            a{
-                color: $DarkBlue; 
-                text-decoration: none;
-            }      
         }
 
         header {
@@ -130,15 +156,7 @@ body {
 
                 .button {
                     // https://stackoverflow.com/questions/41248992/get-button-text-on-to-one-line
-                    white-space: nowrap;
                     margin-left: 2em;
-                    padding: 12px;
-                    height: auto;
-
-                    a {
-                        color: $DarkBlue;
-                        text-decoration: none;
-                    }
                 }
             }
 
@@ -188,8 +206,6 @@ body {
                 justify-content: center;
             }
         }
-
-       
 
         aside {
             grid-area: aside;

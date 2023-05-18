@@ -34,66 +34,66 @@ export default function GamePage ({game, favourites, setFavourites}) {
         <article className='one-game'>
             <h2>{info?.name}</h2>
             <img className='gamepage-img' src={info?.background_image !== null ? info?.background_image : "https://cdn.pixabay.com/photo/2017/08/07/18/39/xbox-2606608_1280.jpg"} alt={info?.name} />
-            
+            <button className='addbutton' onClick={handleFavorite}>Add to favourites</button>
 
             <section className='game-info'>
 
                 {info?.genres.length > 0 &&
-                    <p>Genres: {info?.genres?.map((g, index) => (
+                    <p>GENRES: {info?.genres?.map((g, index) => (
                         <span key={index}>{g?.name}{(index !== info.genres.length - 1 ? ', ' : '')} </span>
                     ))}</p>
                 }
 
                 {info?.rating !== 0 &&
-                    <p>Rating: {info?.rating}</p>
+                    <p>RATING: {info?.rating}</p>
                 }
                 
                 {info?.playtime !== 0 && 
-                    <p>Playtime: {info?.playtime}</p>
+                    <p>PLAYTIME: {info?.playtime}</p>
                 }
 
                 {info?.tags.length > 0 &&
-                    <p>Tags: {info?.tags?.map((g, index) => (
+                    <p>TAGS: {info?.tags?.map((g, index) => (
                         <span key={index}>{g?.name}{(index !== info.tags.length - 1 ? ', ' : '')} </span>
                     ))}</p> 
                 }
                 
                 {info?.developers.length > 0 &&
-                    <p>Developers: {info?.developers?.map((g, index) => (
+                    <p>DEVELOPERS: {info?.developers?.map((g, index) => (
                         <span key={index}>{g?.name}{(index !== info.developers.length - 1 ? ', ' : '')} </span>
                     ))}</p>
                 }
 
                 {info?.publishers.length > 0 &&
-                    <p>Publisher: {info?.publishers?.map((g, index) => (
+                    <p>PUBLISHER: {info?.publishers?.map((g, index) => (
                         <span key={index}>{g?.name}{(index !== info.publishers.length - 1 ? ', ' : '')} </span>
                     ))} </p>
                 }
 
                 {info?.released !== null &&
-                    <p>Released: {info?.released}</p>
+                    <p>RELEASED: {info?.released}</p>
                 }
 
                 {info?.platforms.length > 0 &&
-                    <p>Platforms: {info?.platforms?.map((g, index) => (
+                    <p>PLATFORMS: {info?.platforms?.map((g, index) => (
                         <span key={index}>{g?.platform.name}{(index !== info.platforms.length - 1 ? ', ' : '')} </span>
                     ))}
                     </p>
                 }
             
                 {info?.stores.length > 0 &&
-                    <p>Stores: {info?.stores?.map((g, index) => (
+                    <p>STORES: {info?.stores?.map((g, index) => (
                         <span key={index}>{g?.store.name}{(index !== info.stores.length - 1 ? ', ' : '')} </span>
                     ))}
                     </p>
                 }
 
                 {info?.description_raw && 
-                    <p>Description: {info?.description_raw}</p>
+                    <p>DESCRIPTION: {info?.description_raw}</p>
                 }
             </section>
-
-            <button className='button' onClick={handleFavorite}>Add to favourites</button>
         </article>
+        /*For fjerning av komma når det ikke er mere informasjon kilde:
+        https://www.appsloveworld.com/reactjs/100/10/how-to-add-a-comma-in-array-map-after-every-element-except-last-element-in-react?utm_content=cmp-true */
     )
 }
