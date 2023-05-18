@@ -1,4 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@media only screen and (max-width: 600px) {
+  body div.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header" "main" "aside" "footer";
+  }
+  body div.container header {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  body div.container header nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  body div.container header nav li {
+    width: 100%;
+    border-top: 2px solid #ea3471;
+  }
+}
 body {
   background-color: #151e3f;
   font-size: 20px;
