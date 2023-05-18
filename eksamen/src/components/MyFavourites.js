@@ -1,6 +1,6 @@
 import GameCard from "./GameCard";
 
-export default function MyFavourites({games}){
+export default function MyFavourites({games}) {
     
   return (
     <>

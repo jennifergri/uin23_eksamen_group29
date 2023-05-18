@@ -35,9 +35,9 @@ function App() {
         setGames(data.results)
 
         const adventureGames = data.results.filter((game) => game.genres.some((genre) => genre.slug === 'action'))
-        /*Kilde: .filter metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter */
-        /*Kilde: .some metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some 
-        for å sjekke arrayen om sjangeren inneholder adventure og deretter returnerer vi det i return. */
+        //Kilde: .filter metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter 
+        //Kilde: .some metoden https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some 
+        //for å sjekke arrayen om sjangeren inneholder adventure og deretter returnerer vi det i return. 
         setGenredGames(adventureGames)
       }
       
@@ -59,9 +59,9 @@ function App() {
       </header>
     
       <Routes>
-        <Route path="/" element={<Dashboard games={games} genredGames={genredGames} MyFavourites={favourites}/>}/>
-        <Route path="/gameshop" element={<GameShop games={games}/>}/>
-        <Route path="/mygames" element={<MyGames games={genredGames}/>}/>
+        <Route path="/" element={<Dashboard games={games} genredGames={genredGames} MyFavourites={favourites} />}/>
+        <Route path="/gameshop" element={<GameShop games={games} />}/>
+        <Route path="/mygames" element={<MyGames games={genredGames} />}/>
         <Route path="/myfavourites" element={<MyFavourites games={favourites} />}/>
         <Route path="/:slug" element={<GamePage game={games} favourites={favourites} setFavourites={setFavourites} />}/>
       </Routes>

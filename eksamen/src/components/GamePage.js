@@ -23,8 +23,8 @@ export default function GamePage ({game, favourites, setFavourites}) {
         // Sjekker om spillet allerede ligger i favoritter
         const alreadyAdded = favourites.some(game => game.id === oneGame.id)
 
-        // Hvis den ikke ligger i array så legg til
-        // push fungerer ikke, så fant denne: https://stackoverflow.com/questions/54676966/push-method-in-react-hooks-usestate
+        // Hvis den ikke ligger i array så legg til:
+        // Push method: https://stackoverflow.com/questions/54676966/push-method-in-react-hooks-usestate
         if(!alreadyAdded) {
             setFavourites([...favourites, oneGame])
         }
@@ -39,6 +39,8 @@ export default function GamePage ({game, favourites, setFavourites}) {
 
             <section className='game-info'>
 
+            {/* Mapper for å hente informasjonen vi trenger */}
+            {/* Fjerner kategori om det ikke er noe informasjon å hente ut. Fjerner også komma om det ikke er mer informasjon på gjeldende punkt. */}
                 {info?.genres.length > 0 &&
                     <p>GENRES: {info?.genres?.map((g, index) => (
                         <span key={index}>{g?.name}{(index !== info.genres.length - 1 ? ', ' : '')} </span>
@@ -95,7 +97,7 @@ export default function GamePage ({game, favourites, setFavourites}) {
             </section>
         </article>
         </div>
-        /*For fjerning av komma når det ikke er mere informasjon kilde:
+        /* For fjerning av komma når det ikke er mere informasjon kilde:
         https://www.appsloveworld.com/reactjs/100/10/how-to-add-a-comma-in-array-map-after-every-element-except-last-element-in-react?utm_content=cmp-true */
     )
 }
